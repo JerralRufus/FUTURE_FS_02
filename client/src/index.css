@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+*{
+    margin : 0 ;
+    padding : 0 ;
+    box-sizing  : border-box ;
+    text-decoration : none ;
+    background : transparent ;
+    font-family: 'Poppins',sans-serif ;
+}
+
+body {
+    background: white ;
+    color : #161513 ;
+    overflow : hidden ;
+    overflow-y: scroll ;
+}

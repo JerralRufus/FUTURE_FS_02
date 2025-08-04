@@ -1,0 +1,53 @@
+.brandBars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0;
+    padding: 0 2rem;
+    max-width: 90rem;
+}
+
+.brandBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    width: 20rem;
+    height: auto;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.brandBar img {
+    height: 400px;
+    width: 400px;
+    object-fit: contain;
+    margin-bottom: 0;
+    opacity: 0.25;
+    transition: opacity 0.3s ease;
+}
+
+.brandBar img:hover {
+    opacity: 1;
+}
+
+
+@media (max-width: 720px) {
+    .brandBars {
+        padding: 0 1rem;
+        gap: 1rem;
+    }
+
+    .brandBar {
+        width: 45%;
+        padding: 0.5rem;
+    }
+
+    .brandBar img {
+        width: 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,156 @@
+.navbar {
+    height: 7rem;
+    width: 100%; 
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+    background-color: white;
+    box-shadow: 0 1px 3px -2px black;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo p {
+    color: #171717;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+
+.navbar img.logo {
+    object-fit: cover;
+    height: 3.5rem;
+    width: 12.5rem; 
+}
+
+.desktopMenu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 75px;
+    color: #626262;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 10rem ;
+}
+
+.desktopMenu li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.desktopMenu hr {
+    border: none;
+    width: 80%;
+    height: 3px;
+    border-radius: 10px;
+    background: #1a0683;
+}
+
+.navLoginCart {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    position: relative; 
+    margin-right : 5rem  ;
+}
+
+.navLoginCart button {
+    width: 6rem;
+    height: 3rem;
+    outline: none;
+    border: 1px solid;
+    border-radius: 75px;
+    cursor: pointer;
+    font-weight: 500;
+    background: white; 
+}
+
+.navLoginCart img {
+    height: 3rem; 
+    width: auto;
+    object-fit: cover;
+}
+
+.navLoginCart button:active {
+    background: #f3f3f3;
+}
+
+.cartCount {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; 
+    top: 5px; 
+    right: 250px; 
+    border-radius: 11px;
+    font-size: 14px;
+    background: #1a0683;
+    color: white;
+}
+
+
+.mobMenu {
+    display: none;
+    height: 2.5rem;
+    cursor: pointer;
+}
+
+.navMenu {
+    position: absolute;
+    top: 7rem;
+    right: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.listItem {
+    text-decoration: none;
+    color: #626262;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.listItem:hover {
+    background-color: #f5f5f5;
+}
+
+@media (max-width: 900px) {
+    .desktopMenu {
+        gap: 50px;
+    }
+    .navLoginCart {
+        gap: 1.5rem;
+    }
+    .cartCount {
+        right: 12rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .desktopMenu, .navLoginCart {
+        display: none;
+    }
+    .mobMenu {
+        display: block; 
+    }
+    .navbar {
+        padding: 0 1.5rem;
+    }
+}

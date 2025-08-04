@@ -1,0 +1,233 @@
+.container {
+    position: relative;
+    height: 400px;
+    width: 800px;
+    margin: 100px auto;
+    perspective: 1000px;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate 40s infinite linear;
+}
+
+.card {
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    left: 20%;
+    top: 10%;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    transition: transform 1s, box-shadow 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.05) rotateY(var(--rotateY)) translateZ(400px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.card:nth-child(1) {
+    transform: rotateY(0deg) translateZ(400px);
+    --rotateY: 0deg;
+}
+
+.card:nth-child(2) {
+    transform: rotateY(72deg) translateZ(400px);
+    --rotateY: 72deg;
+}
+
+.card:nth-child(3) {
+    transform: rotateY(144deg) translateZ(400px);
+    --rotateY: 144deg;
+}
+
+.card:nth-child(4) {
+    transform: rotateY(216deg) translateZ(400px);
+    --rotateY: 216deg;
+}
+
+.card:nth-child(5) {
+    transform: rotateY(288deg) translateZ(400px);
+    --rotateY: 288deg;
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.featureBars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 2rem; 
+    margin: 10rem auto 0;
+    padding: 0 2rem; 
+    max-width: 90rem;
+}
+
+.featureBar {
+    display: flex;
+    flex-direction: row;      
+    align-items: center;      
+    gap: 1rem;               
+    width: 20rem;             
+    height: auto;          
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.featureBar img {
+    height: 100px;             
+    width: 100px;
+    object-fit: contain;
+    margin-bottom: 0;         
+}
+
+.featureText {
+    display: flex;
+    flex-direction: column;
+}
+
+.featureBar h2 {
+    font-size: 1.1rem;        
+    font-weight: 500;
+    text-align: left;        
+    margin: 0;               
+}
+
+.featureBar h6 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: left;
+    margin: 0;
+    color: #666; 
+}
+
+
+.image-container-carousel {
+    display: grid ;
+    grid-auto-flow: column ;
+    grid-auto-columns : 250px ;
+    justify-items:  stretch ;
+    animation: animation 12s linear infinite ;
+}
+
+.image-container-carousel img {
+    width: 230px ;
+    height: 270px ;
+    border-radius: 12px ;
+    object-fit: cover ;
+    border : 1px solid #a5b1c2 ;
+}
+
+@keyframes animation {
+    to {
+        translate : calc(-3*300px) ;
+    }
+}
+
+.carousel {
+    overflow: hidden;
+    width: 1200px;
+    padding: 30px 0;
+    margin-top: 60px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.sectionTitle-home {
+    display: block; 
+    font-size: 2.5rem; 
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+
+
+@media (max-width: 720px) {
+    .container {
+        height: 300px;
+        width: 80%;
+        perspective: 800px;
+    }
+
+    .card {
+        width: 75%;
+        object-fit: cover ;
+    }
+
+    .card:hover {
+        transform: scale(1.05) rotateY(var(--rotateY)) translateZ(200px);
+    }
+
+    .card:nth-child(1) {
+        transform: rotateY(0deg) translateZ(200px);
+    }
+
+    .card:nth-child(2) {
+        transform: rotateY(72deg) translateZ(200px);
+    }
+
+    .card:nth-child(3) {
+        transform: rotateY(144deg) translateZ(200px);
+    }
+
+    .card:nth-child(4) {
+        transform: rotateY(216deg) translateZ(200px);
+    }
+
+    .card:nth-child(5) {
+        transform: rotateY(288deg) translateZ(200px);
+    }
+
+    .carousel {
+        width: 100%;
+        padding: 20px 0;
+        margin-top: 40px;
+    }
+
+    .image-container-carousel {
+        grid-auto-columns: 200px;
+        animation: animation 10s linear infinite;
+    }
+
+    .image-container-carousel img {
+        width: 180px;
+        height: 220px;
+    }
+
+    @keyframes animation {
+        to {
+            transform: translateX(calc(-4 * 250px));
+        }
+    }
+
+    .sectionTitle-home {
+        font-size: 2rem;
+    }
+    
+}
+

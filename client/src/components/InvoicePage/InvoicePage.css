@@ -1,0 +1,215 @@
+.invoice-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.invoice-header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #6a5acd;
+    padding-bottom: 20px;
+}
+
+.invoice-header h1 {
+    font-size: 48px;
+    color: #333;
+    margin: 0;
+}
+
+.invoice-header p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.invoice-details {
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.invoice-details p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.items-header {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 10px;
+}
+
+.invoice-table-header {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    padding: 10px 15px;
+    color: #888;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.invoice-table-header span:first-child {
+    text-align: left;
+}
+
+.invoice-item {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #e1e1e1;
+    text-align: right;
+    font-size: 16px;
+}
+
+.invoice-item:last-child {
+    border-bottom: none;
+}
+
+.item-details {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-weight: 600;
+}
+
+.item-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.item-quantity,
+.item-price,
+.item-total {
+    font-weight: 600;
+}
+
+.invoice-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e1e1e1;
+}
+
+.continue-shopping-btn {
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.continue-shopping-btn:hover {
+    background-color: #5948b3;
+}
+
+@media (max-width: 720px) {
+    .invoice-container {
+        margin: 20px auto;
+        padding: 20px;
+        width: 90%;
+    }
+
+    .invoice-header h1 {
+        font-size: 36px;
+    }
+
+    .invoice-table-header,
+    .invoice-item {
+        grid-template-columns: 2fr 1fr 1fr; 
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .invoice-table-header span:last-child {
+        display: none;
+    }
+    
+    .invoice-item .item-total {
+        display: none;
+    }
+
+    .item-image {
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+    }
+
+    .continue-shopping-btn {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .invoice-header h1 {
+        font-size: 28px;
+    }
+
+    .invoice-header p {
+        font-size: 14px;
+    }
+
+    .invoice-details p {
+        font-size: 14px;
+    }
+
+    .items-header {
+        font-size: 20px;
+    }
+
+    .invoice-table-header {
+        display: none; 
+    }
+
+    .invoice-item {
+        grid-template-columns: 1fr; 
+        gap: 10px;
+        text-align: left;
+        padding-bottom: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .item-details {
+        margin-bottom: 5px;
+    }
+
+    .item-quantity::before {
+        content: 'Quantity: ';
+        font-weight: normal;
+        color: #555;
+    }
+    
+    .item-price::before {
+        content: 'Price: ';
+        font-weight: normal;
+        color: #555;
+    }
+    
+    .item-quantity,
+    .item-price {
+        text-align: left;
+    }
+
+    .invoice-footer {
+        margin-top: 20px;
+    }
+}
